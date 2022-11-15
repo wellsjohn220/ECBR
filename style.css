@@ -197,7 +197,7 @@ footer .glyphicon {
 }
 
 footer.container-fluid {
-  background-color: #cc6699;
+  background: linear-gradient(to top, #cc6699 0%, #ffccff 100%);
   color:white;
   text-align: center;
 }
