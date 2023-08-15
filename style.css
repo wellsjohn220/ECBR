@@ -18,7 +18,7 @@ h4 {
   margin-bottom: 30px;
 }
 .jumbotron {
-  background: linear-gradient(to top, #cc6699 0%, #ffccff 100%);
+  background: linear-gradient(to top, #ff0066 0%, #ff99cc 100%);
   color: #fff;
   padding: 100px 25px;
   font-family: Montserrat, sans-serif;
@@ -197,7 +197,7 @@ footer .glyphicon {
 }
 
 footer.container-fluid {
-  background: linear-gradient(to top, #cc6699 0%, #ffccff 100%);
+  background-color: #cc6699;
   color:white;
   text-align: center;
 }
@@ -208,4 +208,9 @@ footer.container-fluid a {
 }
 .thumbnail:hover {
   box-shadow: 0 0 2px 1px red;
+}
+#msg {
+  color:lime;
+  font-weight: bold;
+  margin-top: 120px;
 }

@@ -50,21 +50,20 @@
 
 <div class="jumbotron text-center">
   <h1>Evaluate and communicate business requirements</h1> 
-  <p style="color: lime;">This site powered by 12345 John in 2022</p> 
+  <p style="color: lime;">This site powered by 12345 John in 2023</p> 
   <div class="form-group row">
     <div class="col-xs-3"> 
     </div>
     <div class="col-xs-6">
-        <form>
+        <form name="submit-to-google-sheet">
             <div class="input-group">
-              <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+              <input type="email" name="Email" class="form-control" size="50" placeholder="Email Address" required>
               <div class="input-group-btn">
-                <!-- <a href="subscrib.html" target="blank"><button type="button" class="btn btn-danger">Subscribe</button></a>  -->
-                <a href="mailto:wellsjohn220@gmail.com?subject=subscribe ictsolution&body=Please input yuor request here!">
-                  <button type="button" class="btn btn-danger">Subscribe</button></a>
+                <button type="submit" class="btn btn-danger"> 
+                <span class="glyphicon glyphicon-envelope"></span>&nbsp;Subscribe</button>
               </div>
             </div>
-        </form>
+        </form><span id="msg"></span>
     </div>
     <div class="col-xs-3">     
     </div>
@@ -207,11 +206,8 @@
         Fill the Feedback Form &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a><br />
       <br><a href="https://docs.google.com/spreadsheets/d/1RDLfwvcBUFqlXlCkB9VUHoqn-nLuQzE3Hp8En_djDhk/edit?usp=sharing" class="btn btn-default btn-lg">
         View the Feedback Result</button></a><br>     
-    </div>
- 
+    </div> 
   </div>
-   
-
 </div>
 
 <!-- Container (Services Section) -->
@@ -580,7 +576,25 @@
   <p>This site powered By <a href="https://wic.nsw.edu.au/" title="Visit Our College" target="blank">wic.nsw.edu.au/</a></p>
   <p>Powered by 12345 John</p>
 </footer>
-</body>
 <!-- Load external JavaScript -->
 <script src="scripts.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbziD7eQGLvxHJtvXuH_hR1Onp66sz4we60iPyXFcAThReLLMi78FMDvxtXYn96-hh_M/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+          msg.innerHTML = "<br />Thank you For Subscribing by 12345 John"
+          setTimeout(function(){
+              msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
 </html>
