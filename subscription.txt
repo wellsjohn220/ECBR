@@ -2,6 +2,8 @@ https://www.youtube.com/watch?v=a8Om25FbaJA     // for subscribe
 
 https://github.com/jamiewilson/form-to-google-sheets    // script on google form
 
+https://www.youtube.com/watch?v=0X0kovjzLrw     // for contact
+
 //================================================================================================================================
 /*
 Paste this script into the 'Code.gs' tab in the Script Editor

@@ -541,26 +541,37 @@
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      <p id="contactaddress">Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> NSW Australia</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +61 0415713488</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;wellsjohn220@gmail.com</p>
     </div>
     <div class="col-sm-7 slideanim">
+      <form action="https://formspree.io/f/xaygeylp" method="POST" >
       <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        <div class="col-sm-4 form-group">
+          <input class="form-control" id="name" name="Name" placeholder="Name" type="text" required>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <div class="col-sm-8 form-group">
+          <input class="form-control" id="email" name="Email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <textarea class="form-control" id="comments" name="Comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+        <div class="col-sm-6 form-group">
+        <select name="Continent">
+          <option>Africa</option>
+          <option>Asia</option>
+          <option>Australia</option>
+          <option>North America</option>
+          <option>South America</option>
+        </select>  
+        </div>
+        <div class="col-sm-6 form-group">
+          <button class="btn btn-default pull-right" type="submit">Contact info Send by 12345</button>
         </div>
       </div>
+      </form>
     </div>
   </div>
 </div>
